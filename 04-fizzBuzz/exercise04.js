@@ -23,6 +23,25 @@
      *      1, Fizz, Buzz, Fizz, 5, FizzBuzz, 7, Fizz, Buzz, Fizz, 11, FizzBuzz,
      */
 
-    //your code here
+    function fizzBuzz(maxValue) {
+        console.log("max value is", maxValue)
+        let string = "";
+        for (let i = 1; i <= maxValue; i++) {
+            console.log("i is", i)
+            if (i % 2 === 0 && i % 3 === 0) {
+                string = string.concat("FizzBuzz, ");
+            } else if (i % 3 === 0) {
+                string = string.concat("Buzz, ");
+            } else if (i % 2 === 0) {
+                string = string.concat("Fizz, ");
+            } else {
+                string = string.concat(i + ", ");
+            }
+        }
+        
+        return string;
+    }
+
+    console.log(fizzBuzz(12));
 
 })();
