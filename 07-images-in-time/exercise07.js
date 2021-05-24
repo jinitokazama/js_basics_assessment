@@ -31,5 +31,19 @@
   }
 
   //your code here
+  const imgArray = ['cats.jpg', 'hugger.jpg', 'internet.jpg', 'jackson.jpg', 'washington.jpg'];
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  function getRandomImage() {
+    let imageIndex = getRandomInt(5);
+    const imgName = imgArray[imageIndex];
+    addImage(imgName);
+    setTimeout(getRandomImage, 2.5 * 1000);
+  }
+
+  getRandomImage();
 
 })();
