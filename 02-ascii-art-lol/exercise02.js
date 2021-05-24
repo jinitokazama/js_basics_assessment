@@ -10,6 +10,10 @@
 (function() {
 
     //your code here
+    for (let i = 0; i < artArray.length; i++) {
+        artArray.splice(i + 1, 1);
+ 
+    }
 
     writeAscii(artArray);
 
