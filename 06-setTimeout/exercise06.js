@@ -15,5 +15,15 @@
 
 //your code here
 
+let title = document.querySelector('#title');
+
+
+function setText() {
+  title.innerText = 'GoodBye World';
+}
+
+setTimeout(setText, 3.0*1000);
+
+
 })();
     
