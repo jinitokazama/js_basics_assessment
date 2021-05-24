@@ -20,6 +20,38 @@
 
 (function () {
 
-    //your code here
+    // 1
+    let feedbackTitle = document.querySelector("div h1");
+    feedbackTitle.addEventListener('click', function() {
+        if (feedbackTitle.style.color === 'red') {
+            feedbackTitle.style.color = 'black';
+        } else {
+            feedbackTitle.style.color = 'red';
+        }
+    })
+
+    // 2
+    let allLinks = document.querySelectorAll("h5 a")
+    console.log("All;links", allLinks)
+   allLinks[1].remove()
+   allLinks[3].remove()
+   allLinks[5].remove()
+
+
+    // 3
+    let allBacon = document.querySelectorAll("div p")
+    for (let node of allBacon) {
+        node.innerText = node.innerText.replace('Bacon', 'LASER VISION');
+    }
+
+    // 4
+    let allPosts = document.querySelectorAll('.row.post')
+    allPosts[5].remove();
+    allPosts[6].remove();
+    
+
+    // 5
+    let images = document.querySelector("aside")
+    images.remove();
 
 })();
